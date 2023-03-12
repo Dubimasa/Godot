@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Images/Sprites/furniture/Table.png" type="Texture" id=1]
+
+[node name="bureau" type="Node2D"]
+
+[node name="planche" type="Sprite" parent="."]
+position = Vector2( 513.279, 540 )
+scale = Vector2( 1.07442, 1.17647 )
+texture = ExtResource( 1 )

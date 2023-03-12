@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/horloge.gd" type="Script" id=1]
+[ext_resource path="res://Images/Sprites/furniture/Horloge.png" type="Texture" id=2]
+[ext_resource path="res://Images/Sprites/furniture/Racine_Horloge.png" type="Texture" id=3]
+[ext_resource path="res://Images/Sprites/furniture/panneau_patient.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://font/ROGFONTS-REGULAR.OTF"
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = SubResource( 3 )
+
+[node name="horloge" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 956, 110 )
+texture = ExtResource( 4 )
+
+[node name="Racine" type="Sprite" parent="."]
+position = Vector2( 929, 27 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 924, 48 )
+texture = ExtResource( 2 )
+
+[node name="temps" type="Label" parent="."]
+margin_left = 865.0
+margin_top = 25.0
+margin_right = 989.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 4 )
+text = "08:00"
+
+[node name="nbr_personne" type="Label" parent="."]
+margin_left = 970.0
+margin_top = 101.0
+margin_right = 989.0
+margin_bottom = 125.0
+custom_fonts/font = SubResource( 5 )
+text = "0"
+
+[node name="nbr_personne_passe" type="Label" parent="."]
+margin_left = 915.0
+margin_top = 102.0
+margin_right = 947.0
+margin_bottom = 126.0
+grow_horizontal = 0
+custom_fonts/font = SubResource( 5 )
+text = "1"
+align = 2
+
+[node name="slash" type="Label" parent="."]
+margin_left = 949.0
+margin_top = 101.0
+margin_right = 970.0
+margin_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 5 )
+text = "/"

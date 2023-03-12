@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Resource
+
+export(String) var name
+export(String) var description
+
+func _init(nam=\"\",desc=\"\"):
+	name = nam
+	description = desc
+"
+
+[resource]
+script = SubResource( 1 )
+name = "Blague Nulle"
+description = "Et celle de l'orque bourré, vous la connaissez ?"

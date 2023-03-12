@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Images/Sprites/livre.png" type="Texture" id=1]
+[ext_resource path="res://scenes/livre.gd" type="Script" id=2]
+[ext_resource path="res://Images/Sprites/livre_hover.png" type="Texture" id=3]
+
+[node name="encyclopedie" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="livre" type="TextureButton" parent="."]
+margin_left = 870.0
+margin_top = 466.0
+margin_right = 1002.0
+margin_bottom = 600.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[connection signal="pressed" from="livre" to="." method="_on_livre_pressed"]
